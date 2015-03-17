@@ -4,9 +4,14 @@ class User < ActiveRecord::Base
 	has_many :user_places
 	has_many :user_place_categories, through: :user_places
 	has_many :matches
+<<<<<<< HEAD
 	validates :name, :email, presence: true
 	#has_attached_file :image
 	#validates_attachment :image, :content_type => ["image/jpg", "image/jpeg", "image/png", "image/gif"]
+=======
+	validates :name, presence: true
+	# :email
+>>>>>>> ba49b5bf9b30f6afc5645c2495b8b74b9bab52aa
 	has_many :authorizations
 	# in case we ever include oauth beyond FB, eg Twitter, Insta, etc
 	has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/:style/missing.png"

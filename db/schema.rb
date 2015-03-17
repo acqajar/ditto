@@ -87,6 +87,7 @@ ActiveRecord::Schema.define(version: 20150314002307) do
     t.string   "rel_type"
     t.string   "location"
     t.integer  "radius"
+<<<<<<< HEAD
     t.string   "orientation"
     t.datetime "created_at",          null: false
     t.datetime "updated_at",          null: false
@@ -94,6 +95,10 @@ ActiveRecord::Schema.define(version: 20150314002307) do
     t.string   "avatar_content_type"
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
+=======
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+>>>>>>> ba49b5bf9b30f6afc5645c2495b8b74b9bab52aa
   end
 
 end
