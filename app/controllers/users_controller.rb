@@ -23,7 +23,7 @@ class UsersController < ApplicationController
 
 
   def yelp_search
-    @yelp = Yelp.client.search(params[:location], { term: params[:business] })
+    @yelp = Yelp.client.search(params[:location], { term: params[:business] }).businesses
     respond_with @yelp
   end
 
@@ -44,8 +44,14 @@ class UsersController < ApplicationController
 
   # GET /users/1/edit
   def edit
+<<<<<<< HEAD
   
 end
+=======
+    @user = User.find_lat_long_for_zipcode
+  end
+
+>>>>>>> 25d10278b8286e2981efc3ed806f5832efd411d8
   # POST /users
   # POST /users.json
   def create
@@ -95,6 +101,12 @@ end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
+<<<<<<< HEAD
       params.require(:user).permit(:name, :email, :age, :avatar, :gender, :rel_type, :location, :radius, :fb_id, :orientation)
     end 
+=======
+      params.require(:user).permit(:name, :email, :age, :gender, :rel_type, :location, :radius, :fb_id, :orientation,
+        user_places_attributes: [])
+    end
+>>>>>>> 25d10278b8286e2981efc3ed806f5832efd411d8
 end

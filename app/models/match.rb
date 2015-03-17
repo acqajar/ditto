@@ -5,8 +5,12 @@ class Match < ActiveRecord::Base
 	has_many :user_place_categories, :foreign_key => "userplace_id"
 	# through: :user_place_category_matches
 
+<<<<<<< HEAD
 	def index
 		Post.find_by_sql 'SELECT* FROM '
 	end
 
+=======
+	
+>>>>>>> 25d10278b8286e2981efc3ed806f5832efd411d8
 end
